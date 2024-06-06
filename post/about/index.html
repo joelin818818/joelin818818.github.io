@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>关于 | 轻记</title>
+<link rel="shortcut icon" href="https://blog.lbcn.top/favicon.ico?v=1717634219267">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.lbcn.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="关于 | 轻记 - Atom Feed" href="https://blog.lbcn.top/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="轻记。这是一个刚刚诞生的平台，它的初衷非常简单：记录生活中的闲言杂语，分享我在工作和生活中的所见所闻。在这里，我将用文字记录下那些触动心灵的瞬间，让我们一起感受生活的美好。
+
+轻记的建立，是因为我深信文字的力量。在这个信息爆炸的时代，我们每..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://blog.lbcn.top">
+  <img class="avatar" src="https://blog.lbcn.top/images/avatar.png?v=1717634219267" alt="">
+  </a>
+  <h1 class="site-title">
+    轻记
+  </h1>
+  <p class="site-description">
+    笔尖轻触，心事如烟，默默记录，深浅自知。
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              关于
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-06-05
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://blog.lbcn.top/post-images/about.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>轻记。这是一个刚刚诞生的平台，它的初衷非常简单：记录生活中的闲言杂语，分享我在工作和生活中的所见所闻。在这里，我将用文字记录下那些触动心灵的瞬间，让我们一起感受生活的美好。</p>
+<!-- more -->
+<p>轻记的建立，是因为我深信文字的力量。在这个信息爆炸的时代，我们每天都在接收大量的信息，但真正能留在我们心中的却寥寥无几。我希望通过文字，将这些琐碎却珍贵的记忆留下来，让它们成为我人生道路上的指引灯塔。</p>
+<p>在这里，我会分享我的工作心得、生活趣事以及对世界的观察和思考。无论是成功时的喜悦，还是挫折后的反思，我都会坦诚地记录下来。因为我相信，真实的情感和经历，才是最能打动人心的。</p>
+<p>此外，我也非常期待与您的互动。如果您对我的文章有任何想法或建议，欢迎随时留言交流。让我们一起在文字的世界里，寻找共鸣、共同成长。</p>
+<p>最后，感谢您抽出宝贵的时间访问轻记。希望我们能在这里相遇，共同见证彼此的成长与变化。让我们从文字里释放一切，书写属于我们的精彩篇章！</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  <a target="_blank">Gridea</a>
+  <a class="rss" href="https://blog.lbcn.top/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
